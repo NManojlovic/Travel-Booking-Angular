@@ -1,0 +1,51 @@
+<header class="travel-list__header container">
+    <div>
+        <label class="travel-list__filter-caption">
+            Means of transport:
+        </label>
+        <select name="selectDestination" class="control" id="selectDestination" (change)="filterTravels($event)">
+            <option value="-1">All</option>
+            <option value="0">Airplane</option>
+            <option value="1">Train</option>
+            <option value="2">Bus</option>
+        </select>
+    </div>
+    <div>
+        <label class="travel-list__filter-caption">
+            Destinations:
+        </label>
+        <select name="selectDestination" class="control" id="selectDestination" (change)="setDestination($event)">
+            <option value="allDestinations">All destinations</option>
+            <option value="{{destination}}" *ngFor="let destination of destinations">
+                {{ destination }}
+            </option>
+        </select>
+    </div>
+    <div>
+        <label class="travel-list__filter-caption">
+            Distance up to (km):
+        </label>
+        <input type="number" name="distanceUpTo" class="control" id="distanceUpTo" (change)="setMaxDistance($event)"/>
+    </div>
+    <div>
+        <label class="travel-list__filter-caption">
+            Price up to (EUR):
+        </label>
+        <input type="number" name="priceUpTo" class="control" id="priceUpTo" (change)="setMaxPrice($event)"/>
+    </div>
+    <div>
+        <label class="travel-list__filter-caption">
+            Maximum travel time (min):
+        </label>
+        <input type="number" name="maxTravelTime" class="control" id="maxTravelTime" (change)="setMaxTravelTime($event)"/>
+    </div>
+</header>
+<ul class="travel__list grid container">
+    <li *ngIf="filteredTravels.length === 0; else elseBlock">
+        No such travels
+    </li>
+    <ng-template #elseBlock>
+        <single-travel *ngFor="let filteredTravel of filteredTravels" [travel]="filteredTravel">
+        </single-travel>
+    </ng-template>
+</ul>

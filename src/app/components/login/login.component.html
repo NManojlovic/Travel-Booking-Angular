@@ -1,0 +1,23 @@
+<main class="form-holder container">
+    <form action="" class="form kids-vertical-spacing" (submit)="sendLoginRequest($event)">
+        <h1 class="text--large">
+            Login
+        </h1>
+        <input type="text" 
+               name="username" 
+               id="username" 
+               class="control"
+               placeholder="Enter username"
+               (change)="setUsername($event)"
+        />
+        <input type="password" 
+               name="password" 
+               id="password" 
+               class="control"
+               placeholder="Enter password"
+               (change)="setPassword($event)"
+        />
+    
+        <button>Login</button>
+    </form>
+</main>

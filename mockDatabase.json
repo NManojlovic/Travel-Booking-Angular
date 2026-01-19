@@ -1,0 +1,132 @@
+{
+  "users": [
+    {
+      "id": 0,
+      "name": "Nikola",
+      "surname": "Manojlovic",
+      "contactData": [
+        { "email": "nikola1@gmail.com" },
+        { "phoneNumber": "0671223332" },
+        { "address": "Aleksandra Sumara 12, Belgrade" }
+      ],
+      "favoriteDestinations": [
+        "Novi Sad",
+        "Istanbul",
+        "Nis"
+      ],
+      "favoriteTravelMeans": [
+        "Plane",
+        "Bus",
+        "Train"
+      ],
+      "username": "nikola1",
+      "password": "password123",
+      "myTravels": []
+    }
+  ],
+  "travels": [
+    {
+      "id": 1,
+      "transportationMean": 0,
+      "startingPoint": "Belgrade",
+      "destination": "Istanbul",
+      "distanceInKM": 949,
+      "travelTimeInMinutes": 100,
+      "priceInEUR": 30,
+      "averageRating": 4.20,
+      "completedBy": ["nikola1"],
+      "reservedBy": [],
+      "reviews": [
+        {
+          "rating": 5,
+          "reviewText": "Great flight, everything was on time.",
+          "username": "nikola1"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "transportationMean": 2,
+      "startingPoint": "Cuprija",
+      "destination": "Paracin",
+      "distanceInKM": 15,
+      "travelTimeInMinutes": 20,
+      "priceInEUR": 2.5,
+      "averageRating": 5.00,
+      "completedBy": ["nikola1"],
+      "reservedBy": [],
+      "reviews": [
+        {
+          "rating": 5,
+          "reviewText": "Very fast and cheap bus ride!",
+          "username": "nikola1"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "transportationMean": 2,
+      "startingPoint": "Nis",
+      "destination": "Sofija",
+      "distanceInKM": 160,
+      "travelTimeInMinutes": 150,
+      "priceInEUR": 15,
+      "averageRating": 0,
+      "completedBy": [],
+      "reservedBy": [],
+      "reviews": []
+    },
+    {
+      "id": 4,
+      "transportationMean": 1,
+      "startingPoint": "Vranje",
+      "destination": "Leskovac",
+      "distanceInKM": 70,
+      "travelTimeInMinutes": 60,
+      "priceInEUR": 10,
+      "averageRating": 0,
+      "completedBy": [],
+      "reservedBy": [],
+      "reviews": []
+    },
+    {
+      "id": 5,
+      "transportationMean": 2,
+      "startingPoint": "Uzice",
+      "destination": "Cacak",
+      "distanceInKM": 55,
+      "travelTimeInMinutes": 50,
+      "priceInEUR": 8,
+      "averageRating": 0,
+      "completedBy": [],
+      "reservedBy": [],
+      "reviews": []
+    },
+    {
+      "id": 6,
+      "transportationMean": 2,
+      "startingPoint": "Kraljevo",
+      "destination": "Banja Luka",
+      "distanceInKM": 330,
+      "travelTimeInMinutes": 300,
+      "priceInEUR": 25,
+      "averageRating": 0,
+      "completedBy": [],
+      "reservedBy": [],
+      "reviews": []
+    },
+    {
+      "id": 7,
+      "transportationMean": 1,
+      "startingPoint": "Novi Sad",
+      "destination": "Kragujevac",
+      "distanceInKM": 150,
+      "travelTimeInMinutes": 140,
+      "priceInEUR": 15,
+      "averageRating": 0,
+      "completedBy": [],
+      "reservedBy": [],
+      "reviews": []
+    }
+  ]
+}

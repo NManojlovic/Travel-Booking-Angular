@@ -1,0 +1,41 @@
+<header class="container">
+    <nav>
+        <ul class="navigation__list">
+            <li>
+                <a [routerLink]="routePaths.HOME">
+                    Home
+                </a>
+            </li>
+            <ng-container *ngIf="!userIsLoggedIn(); else guestNavigation">
+                <li>
+                    <a [routerLink]="routePaths.REGISTER"
+                       routerLinkActive="activeRoute"
+                    >
+                        Register
+                    </a>
+                </li>
+                <li>
+                    <a [routerLink]="routePaths.LOGIN"
+                       routerLinkActive="activeRoute"
+                    >
+                        Login
+                    </a>
+                </li>
+            </ng-container>
+            <ng-template #guestNavigation>
+                <li>
+                    <a [routerLink]="routePaths.TRAVEL_CART"
+                       routerLinkActive="activeRoute"
+                    >
+                        Travel cart
+                    </a>
+                </li>
+                <li>
+                    <button (click)="logout()">
+                        ({{ this.user.username }}) Logout
+                    </button>
+                </li>
+            </ng-template>
+        </ul>
+    </nav>
+</header>

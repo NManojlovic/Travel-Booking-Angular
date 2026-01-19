@@ -1,0 +1,16 @@
+.travel-list__header
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.travel-list__header > *
+{
+    margin: 1rem 0;
+}
+
+.travel-list__filter-caption
+{
+    font-size: var(--text-font-size);
+}

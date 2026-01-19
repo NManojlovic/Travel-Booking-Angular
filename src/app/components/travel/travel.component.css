@@ -1,0 +1,60 @@
+.travel__holder {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.travel__holder:hover {
+  transform: translateY(-5px);
+}
+
+.travel__route {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px dashed #eee;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+}
+
+.travel__route h2 {
+  margin: 0;
+  font-size: 1.3rem;
+}
+
+.travel__distance {
+  font-size: 0.9rem;
+  color: #666;
+  text-align: center;
+}
+
+.travel__description {
+  margin-bottom: 20px;
+}
+
+.travel__length, .travel__price {
+  display: block;
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+}
+
+.travel__price {
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+.grid {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.grid button {
+  font-size: 0.8rem;
+  padding: 8px;
+}

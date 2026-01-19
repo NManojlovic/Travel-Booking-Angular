@@ -1,0 +1,15 @@
+<header class="container">
+    <h1 class="text--large container">
+        My cart
+    </h1>
+    <p class="text--large">Total price: {{ calculateTotalPrice() }} EUR</p>
+</header>
+<ul class="travel__list grid container">
+    <li *ngIf="user && user.myTravels && user.myTravels.length === 0; else elseBlock">
+        No travels in the cart
+    </li>
+    <ng-template #elseBlock>
+        <single-travel *ngFor="let myTravel of user.myTravels" [travel]="myTravel">
+        </single-travel>
+    </ng-template>
+</ul>

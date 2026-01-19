@@ -1,0 +1,38 @@
+<main class="form-holder container">
+    <form action="" class="form kids-vertical-spacing" (submit)="registerAccount($event)">
+        <h1 class="text--large">
+            Create an account
+        </h1>
+    
+        <input type="text" name="name" id="name" class="control" placeholder="First Name" (change)="setName($event)" required />
+        <input type="text" name="surname" id="surname" class="control" placeholder="Last Name" (change)="setSurname($event)" required />
+        
+        <hr/>
+        <input type="email" name="email" id="email" class="control" placeholder="Email Address" (change)="setEmail($event)" required />
+        <input type="text" name="phoneNumber" id="phoneNumber" class="control" placeholder="Phone Number" (change)="setPhoneNumber($event)" required />
+        <input type="text" name="address" id="address" class="control" placeholder="Home Address" (change)="setAddress($event)" required />
+        
+        <hr/>
+        <input type="text" name="username" id="username" class="control" placeholder="Username" (change)="setUsername($event)" required />
+        <input type="password" name="password" id="password" class="control" placeholder="Password" (change)="setPassword($event)" required />
+        
+        <hr/>
+        <h2 class="text--normal">Pick favorite destinations:</h2>
+        <ul class="grid">
+            <li class="control" *ngFor="let city of ['Istanbul', 'Cuprija', 'Paracin', 'Nis', 'Novi Sad', 'Kragujevac']">
+                <input type="checkbox" [value]="city" (change)="onDestinationChange($event)"> {{city}}
+            </li>
+        </ul>
+
+        <h2 class="text--normal">Pick favorite travel means:</h2>
+        <ul class="grid">
+            <li class="control" *ngFor="let mean of ['Plane', 'Bus', 'Train']">
+                <input type="checkbox" [value]="mean" (change)="onMeanChange($event)"> {{mean}}
+            </li>
+        </ul>
+
+        <button type="submit">
+            Register
+        </button>
+    </form>
+</main>

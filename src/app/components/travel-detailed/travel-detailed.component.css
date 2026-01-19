@@ -1,0 +1,44 @@
+.travel__holder
+{
+    padding: 1.5rem;
+    border-radius: 5px;
+    background-color: hsla(0, 0%, 50%, 0.411);
+}
+
+.travel__route
+{
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+.travel__distance
+{
+    --text-font-size: 1.4rem;
+    display: flex;
+    flex-direction: column;
+    font-size: var(--text-font-size);
+    align-items: center;
+}
+
+.travel__description
+{
+    text-align: center;
+}
+
+.travel__description *
+{
+    --text-font-size: 1.4rem;
+    font-size: var(--text-font-size);
+}
+
+h2
+{
+    font-size: var(--text-font-size);
+}
+
+.travel__placename
+{
+    font-size: var(--text-font-size);
+    font-weight: normal;
+}

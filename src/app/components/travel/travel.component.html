@@ -1,0 +1,43 @@
+<li class="travel__holder">
+    <header class="travel__route">
+        <h2>{{ travel.startingPoint }}</h2>
+        <div class="travel__distance">
+            <i [ngClass]="determineTransportationMean()">
+            </i>
+            {{travel.distanceInKM}} km
+        </div>
+        <h2>{{ travel.destination }}</h2>
+    </header>
+    <div class="travel__description">
+        <time class="travel__length">
+            <i class="fa fas fa-clock"></i>
+            {{ travel.travelTimeInMinutes }} min
+        </time>
+        <span class="travel__price">
+            <i class="fa fa-solid fa-coins"></i>
+            {{ travel.priceInEUR }} EUR
+        </span>
+        <span *ngIf="this.travel.reviews.length > 0; else notYetRated" style="font-size: 1.4rem">
+            Rating: {{ travel.averageRating }} (rated {{ this.travel.reviews.length }} times)
+        </span>
+        <ng-template #notYetRated>
+            <p style="font-size: 1.4rem;">Not yet rated</p>
+        </ng-template>
+    </div>
+    <ng-container *ngIf="userIsLoggedIn()">
+        <div class="grid">
+            <button [disabled]="reservedBySignedInUser" (click)="makeReservation()">
+                {{ reservedBySignedInUser? "Already reserved" : "Reserve" }}
+            </button>
+            <button [hidden]="!reservedBySignedInUser" (click)="undoReservation()">
+                {{ reservedBySignedInUser? "Remove from cart" : "" }}
+            </button>
+            <button [hidden]="!reservedBySignedInUser" [disabled]="travelIsCompleted" (click)="markTravelComplete($event)">
+                {{ travelIsCompleted? "Travel was completed" : "Mark travel completed" }}
+            </button>
+        </div>
+    </ng-container>
+    <div class="grid">
+        <a [routerLink]="['/travel-detailed', travel.id]">Read more</a>
+    </div>
+</li>

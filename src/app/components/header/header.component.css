@@ -1,0 +1,33 @@
+header {
+  background-color: var(--secondary-color);
+  padding: 15px 0;
+  margin-bottom: 30px;
+}
+
+.navigation__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.navigation__list a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.navigation__list a:hover, .activeRoute {
+  color: var(--primary-color) !important;
+}
+
+button {
+  background: transparent;
+  border: 1px solid white;
+  width: auto;
+  padding: 5px 15px;
+}
